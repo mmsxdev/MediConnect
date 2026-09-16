@@ -1,0 +1,2 @@
+package br.edu.mediconnect.servico; import br.edu.mediconnect.legado.ApiWhatsappHospital;
+public class ServicoNotificacao { public void notificar(String canal,String destino,String texto){ if("EMAIL".equals(canal)) System.out.println("EMAIL "+destino+": "+texto); else if("SMS".equals(canal)) System.out.println("SMS "+destino+": "+texto); else if("WHATSAPP".equals(canal)) new ApiWhatsappHospital().enviarMensagem(destino,texto); } }
